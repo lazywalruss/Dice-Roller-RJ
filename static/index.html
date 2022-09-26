@@ -1,15 +1,41 @@
+<!--
+
+ Author: Ryan Johnson
+
+ Class:  Software Engineering
+
+ Project: Lab 2 / Dice Roller
+
+ Description: This is the first version of my Dice Roller application and is being submitted as part of Lab 2.
+
+-->
 <!DOCTYPE html>
 <html>
 <head>
-<title>Node on Azure</title>
+<title>Dice Roller</title>
 </head>
+<style>
+  .center {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  padding: 10px;}
+  
+  button {
+  	background-color: rgb(49,165,55);
+  	border-radius: 50px;
+  	width: 100px;
+  	cursor: pointer;}
+</style>
+<script>
+function myFunction() {
+  outcome = Math.floor(Math.random() * (6 - 1 + 1) + 1)
+  document.getElementById("die").innerHTML = outcome;
+}
+</script>
 <body>
-<h1>Node.js and Express Hosted on Microsoft Azure Template</h1>
-<p>This repository serves as a template that can be used to create a Node.js and Express based website that can easily
-be hosted on Microsoft Azure.</p>
-
-Additional application functionality includes:<br />
-<a href="fetching-from-server.html">Accessing Node.js Server-Side Application Programming Interfaces (APIs)</a><br />
-<a href="fetching-remote-dog-breeds.html">Accessing Remote Application Programming Interfaces (APIs)</a>
-</body>
-</html>
+ <div class="center">
+<h1 id = "die">Roll The Die</h1>
+<button type="button" onclick="myFunction()">Roll The Die</button>
+   
+  </div>
